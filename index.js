@@ -3,8 +3,12 @@ window.addEventListener("load", (event) => {
 });
 
 function goToPageOne() {
-  console.log("adding");
-  alert("We are going to page 1");
   const indexContent = document.getElementById("indexContent");
   indexContent.parentElement.removeChild(indexContent);
+  //content goes here
+}
+function goToPageTwo() {
+  const indexContent = document.getElementById("indexContent");
+  indexContent.parentElement.removeChild(indexContent);
+  //content goes here
 }

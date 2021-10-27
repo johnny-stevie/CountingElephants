@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="index.css" />
     <!--Import Google Icon Font-->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -19,19 +20,50 @@
   <body>
     <!--content-->
     <div id="indexContent">
-      <p>
-        This is the home page about the story of how scientists have counted
-        elephants!
-      </p>
-    </div>
+      <nav>
+        <div class="nav-wrapper grey">
+          <a href="#" class="brand-logo">Counting Elephants</a>
+          <ul class="right hide-on-med-down" id="nav-mobile">
+            <li>
+              <a onclick="goToPageOne()">Page 1</a>
+            </li>
+            <li>
+              <a onclick="goToPageTwo()">Page 2</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-    <button
-      id="page1"
-      onclick="goToPageOne()"
-      class="waves-effect waves-light btn"
-    >
-      Page 1
-    </button>
+      <br />
+      <div class="row">
+        <div class="col offset-s3 card medium grey">
+          <div class="img card-image waves-effect waves-block waves-light">
+            <img
+              src="https://media.kidadl.com/6052b9312b6c3675846c31c4_elephant_quotes_project_how_magnificent_these_creatures_are_8973ec9082.jpeg"
+              class="activator"
+              alt="Elephant"
+            />
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4"
+              >Counting Elephants<i class="material-icons right"
+                >more_vert</i
+              ></span
+            >
+            <p><a href="#">Click for more</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"
+              >Counting Elephants<i class="material-icons right">close</i></span
+            >
+            <p>
+              This is the home page about the story of how scientists have
+              counted elephants!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
