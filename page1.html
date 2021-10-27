@@ -1,0 +1,84 @@
+<!--By Jiaye Huang-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Maxar Satellite Imagery
+        </title>
+    </head>
+    <body>
+        <h1>
+            Deep Learning Detects Elephants in Maxar Satellite Imagery on Par with Human Accuracy
+        </h1>
+
+        <!--Content-->
+        <h2>
+            Basic Introduction
+        </h2>
+        <p>
+                Currently the most common survey technique for elephant populations in savannah environments 
+                is aerial counts from manned aircraft. However, observers on aerial surveys can get exhausted, 
+                be hindered by poor visibility and otherwise succumb to bias. Additionally, 
+                aerial surveys can be costly and logistically challenging.
+        </p>
+        <p>
+                As researchers from the Wildlife Conservation Research Unit, 
+                University of Oxford and Machine Learning Research Group, 
+                University of Bath we used Maxar’s WorldView-3 satellite imagery and deep learning 
+                (TensorFlow API, Google Brain) to detect elephants from space with comparable 
+                accuracy to human detection capabilities.
+        </p>
+        <h2>
+            Further Information about Satellite
+        </h2>
+        <p>
+            Maxar satellites (WorldView-3 shown above) can collect upward of 5,000 km² imagery 
+            in one pass over a matter of minutes, eliminating the risk of double counting and allowing 
+            for repeat surveys at short intervals. This unobtrusive technique requires no 
+            ground presence so the animals are not disturbed, and human safety is not put at 
+            risk during data collection. Previously inaccessible areas become accessible, 
+            and cross-border areas–often crucial to conservation planning–can be surveyed 
+            without the time-consuming requirement of obtaining terrestrial permits.
+        </p>
+        <p>
+            We leveraged deep learning to process enormous amounts of WorldView-3 data 
+            in a matter of hours, instead of the months it would have taken us to sort 
+            it by hand. The deep learning algorithms produce consistent results that 
+            are less prone to error, false negatives and false positives. 
+            They also can be rectified by systematically improving models–the same cannot be said for humans.
+        </p>
+        <h2>
+            What Are We Now
+        </h2>
+        <p>
+            To develop this method, we created a customized training dataset of more than 
+            1,000 elephants in South Africa and fed it into a Convolutional Neural Network (CNN). 
+            The results were then compared to human performance. 
+            In a MARCH 2019 BLOG POST, we described how we created the training dataset and trained the CNN.
+            <br>
+            We’re now proud to share the results of our work. 
+            The CNN can detect elephants in satellite imagery with accuracy as high as human detection capabilities. 
+            The results (known as the F2 score) of the CNN models was 0.78 in heterogeneous areas and 0.73 in 
+            homogenous areas, compared with, an averaged human detection capability 
+            F2 score of 0.77 in heterogeneous areas and 0.80 in homogenous areas. 
+            The model could even detect elephants in places far from the training 
+            data site showing the generalizability of the model. Having trained the machine only on adult elephants, 
+            it was then able to identify calves.
+        </p>
+
+        <!--Original Link-->
+        <a href="https://blog.maxar.com/earth-intelligence/2021/deep-learning-detects-elephants-in-maxar-satellite-imagery-on-par-with-human-accuracy"
+        style="text-decoration: none;"> 
+            By: Isla Duporge and Dr. Olga Isupova, University of Oxford & University of Bath | 01.12.2021
+        </a>
+
+        <button onclick="backToIndex()">
+            Back To Index
+        </button>
+
+        <script src="page1.js">
+        </script>
+    </body>
+</html>
