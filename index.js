@@ -7,8 +7,11 @@ function goToPageOne() {
   indexContent.parentElement.removeChild(indexContent);
   //content goes here
 }
+
 function goToPageTwo() {
   const indexContent = document.getElementById("indexContent");
   indexContent.parentElement.removeChild(indexContent);
   //content goes here
 }
+
+function goToHomePage() {}
