@@ -28,22 +28,23 @@
 
   <body>
     <!--content-->
-    <div id="indexContent">
-      <nav>
-        <div class="nav-wrapper grey">
-          <a href="#" class="brand-logo">Counting Elephants</a>
-          <ul class="right hide-on-med-down" id="nav-mobile">
-            <li>
-              <a>Page 1</a>
-            </li>
-            <li>
-              <a onclick="goToPageTwo()">Page 2</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
 
-      <br />
+    <nav>
+      <div class="nav-wrapper grey">
+        <a onclick="goToHomePage()" class="brand-logo">Counting Elephants</a>
+        <ul class="right hide-on-med-down" id="nav-mobile">
+          <li>
+            <a onclick="goToPageOne()">Page 1</a>
+          </li>
+          <li>
+            <a onclick="goToPageTwo()">Page 2</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <br id="break" />
+    <div id="indexContent">
       <div class="container">
         <div class="row valign-wrapper">
           <div class="col s6 offset-s3 valign">
@@ -78,6 +79,141 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div id="page1-content">
+      <h1>
+        Deep Learning Detects Elephants in Maxar Satellite Imagery on Par with
+        Human Accuracy
+      </h1>
+
+      <!--Content-->
+      <h2>Basic Introduction</h2>
+      <p>
+        Currently the most common survey technique for elephant populations in
+        savannah environments is aerial counts from manned aircraft. However,
+        observers on aerial surveys can get exhausted, be hindered by poor
+        visibility and otherwise succumb to bias. Additionally, aerial surveys
+        can be costly and logistically challenging.
+      </p>
+      <p>
+        As researchers from the Wildlife Conservation Research Unit, University
+        of Oxford and Machine Learning Research Group, University of Bath we
+        used Maxar’s WorldView-3 satellite imagery and deep learning (TensorFlow
+        API, Google Brain) to detect elephants from space with comparable
+        accuracy to human detection capabilities.
+      </p>
+      <h2>Further Information about Satellite</h2>
+      <p>
+        Maxar satellites (WorldView-3 shown above) can collect upward of 5,000
+        km² imagery in one pass over a matter of minutes, eliminating the risk
+        of double counting and allowing for repeat surveys at short intervals.
+        This unobtrusive technique requires no ground presence so the animals
+        are not disturbed, and human safety is not put at risk during data
+        collection. Previously inaccessible areas become accessible, and
+        cross-border areas–often crucial to conservation planning–can be
+        surveyed without the time-consuming requirement of obtaining terrestrial
+        permits.
+      </p>
+      <p>
+        We leveraged deep learning to process enormous amounts of WorldView-3
+        data in a matter of hours, instead of the months it would have taken us
+        to sort it by hand. The deep learning algorithms produce consistent
+        results that are less prone to error, false negatives and false
+        positives. They also can be rectified by systematically improving
+        models–the same cannot be said for humans.
+      </p>
+      <h2>What Are We Now</h2>
+      <p>
+        To develop this method, we created a customized training dataset of more
+        than 1,000 elephants in South Africa and fed it into a Convolutional
+        Neural Network (CNN). The results were then compared to human
+        performance. In a MARCH 2019 BLOG POST, we described how we created the
+        training dataset and trained the CNN.
+        <br />
+        We’re now proud to share the results of our work. The CNN can detect
+        elephants in satellite imagery with accuracy as high as human detection
+        capabilities. The results (known as the F2 score) of the CNN models was
+        0.78 in heterogeneous areas and 0.73 in homogenous areas, compared with,
+        an averaged human detection capability F2 score of 0.77 in heterogeneous
+        areas and 0.80 in homogenous areas. The model could even detect
+        elephants in places far from the training data site showing the
+        generalizability of the model. Having trained the machine only on adult
+        elephants, it was then able to identify calves.
+      </p>
+
+      <!--Original Link-->
+      <a
+        href="https://blog.maxar.com/earth-intelligence/2021/deep-learning-detects-elephants-in-maxar-satellite-imagery-on-par-with-human-accuracy"
+        style="text-decoration: none"
+      >
+        By: Isla Duporge and Dr. Olga Isupova, University of Oxford & University
+        of Bath | 01.12.2021
+      </a>
+    </div>
+
+    <div id="page2-content">
+      <h1>Introduction</h1>
+      <p>
+        The population of African elephants (Loxodonta africana) has plummeted
+        over the last century due to poaching, retaliatory killing from crop
+        raiding and habitat fragmentation (Gara, 2016; Poulsen et al., 2017;
+        Sibanda & Murwira, 2012). To ensure conservation is achieved accurate
+        monitoring is vital. Inaccurate counts can result in misallocation of
+        scarce conservation resources and misunderstanding population trends.
+        Existing techniques are prone to miscounting. The most common survey
+        technique for elephant populations in savannah environments is aerial
+        counts from manned aircraft (Schlossberg et al., 2016). Aerial surveys
+        are conducted either as total counts – flying closely spaced transects,
+        or sample counts, covering 5-20% of an area and extrapolating to a
+        larger area. Several studies have shown that observers on aerial surveys
+        often miscount due to fatigue and visibility issues resulting in
+        over-estimates (Caughley et al., 1976; Jachmann, 2002; Koneff et al.,
+        2008). Aerial surveys can be costly, logistically challenging in terms
+        of finding suitable runways and refuelling stops and time consuming in
+        terms of getting appropriate permissions. This is particularly relevant
+        in cross-border areas where multiple national permissions are required.
+        Remotely sensing elephants using satellite imagery and automating
+        detection via deep learning may provide a novel avenue for surveying
+        while mitigating several of the challenges outlined above.
+      </p>
+      <h1>Materials and Methods</h1>
+      <p>
+        Addo Elephant National Park in South Africa was chosen as the study
+        site. It provides a spectrally complex heterogeneous background with a
+        high concentration of elephants. The park is the third largest park in
+        South Africa at 1640 km2. Different areas of the park have been
+        sectioned off for conservation purposes- elephants were identified in
+        the Main Camp section of the park surrounding Hapoor Dam (Figure 1).The
+        Main Camp is a combination of dense shrubland and low forest
+        e.g.porkbush (Portulcariaafra), White milkwood (Sideroxyloninerme), Cape
+        leadwort(Plumbago auriculate) and open grassland (Kakembo et al., 2015;
+        Tambling et al., 2012). Over six hundred elephants move between these
+        habitats (Du Toit & O’Connor, 2014; Wilgen et al., 2016). Elephants
+        cover themselves in mud to cool down and adopt a range of postures when
+        foraging, playing, sleeping (Soltis et al., 2016; Wickler & Seibt, 1997)
+        so their shape and colour is continually changing. The background
+        environment is also changing as they move between open savannah and
+        woodland and take shelter under trees in the mid-day sun.
+      </p>
+      <h1>Results</h1>
+      <p>
+        The results show that overall for the CNN in both homogeneous &
+        heterogeneous are as we received an F2 score of 0.75.The CNN performed
+        better in heterogeneous areas with an F2 score of 0.778 compared to 0.73
+        in homogeneous areas. The human annotator median F2 score was 0.78 and
+        performance was better in homogeneous areas – 0.80 compared to 0.766 in
+        heterogeneous areas. These results show that the CNN performed with high
+        comparable accuracy compared to human detection capabilities.
+      </p>
+      <p>
+        For more information, please click on
+        <a
+          href="https://zslpublications.onlinelibrary.wiley.com/doi/full/10.1002/rse2.195"
+          >Using very-high-resolution satellite imagery and deep learning to
+          detect and count African elephants in heterogeneous landscapes</a
+        >
+      </p>
     </div>
 
     <!--JavaScript at end of body for optimized loading-->

@@ -3,15 +3,29 @@ window.addEventListener("load", (event) => {
 });
 
 function goToPageOne() {
-  const indexContent = document.getElementById("indexContent");
-  indexContent.parentElement.removeChild(indexContent);
+  hideContent();
   //content goes here
+  document.getElementById("page1-content").style.display = "block";
 }
 
 function goToPageTwo() {
-  const indexContent = document.getElementById("indexContent");
-  indexContent.parentElement.removeChild(indexContent);
   //content goes here
+  hideContent();
+  document.getElementById("page2-content").style.display = "block";
 }
 
-function goToHomePage() {}
+function goToHomePage() {
+  hideContent();
+  document.getElementById("indexContent").style.display = "block";
+}
+
+function hideContent() {
+  const indexContent = document.getElementById("indexContent");
+  const pageOne = document.getElementById("page1-content");
+  const pageTwo = document.getElementById("page2-content");
+  if (indexContent !== null) {
+    indexContent.style.display = "none";
+    pageOne.style.display = "none";
+    pageTwo.style.display = "none";
+  }
+}
